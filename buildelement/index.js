@@ -53,7 +53,7 @@ module.exports = yeoman.generators.Base.extend({
       done();
     }.bind(this));
   },
-  el: function () {
+  buildelement: function () {
     // Create the template element
 
     var el;
