@@ -13,7 +13,9 @@
   "main": "app/index.js",
   "repository": "yeoman/generator-polymer",
   "scripts": {
-    "test": "jshint {app,el,gh,seed}/*.js && mocha --reporter spec"
+    "test": "jshint {app,el,gh,seed}/*.js && mocha --reporter spec",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "chalk": "^1.0.0",
@@ -21,8 +23,9 @@
     "ncp": "^2.0.0",
     "rimraf": "^2.2.8",
     "validate-element-name": "^1.0.0",
-    "yeoman-generator": "^0.18.8",
-    "yosay": "^1.0.0"
+    "yeoman-generator": "^0.24.1",
+    "yosay": "^1.0.0",
+    "snyk": "^1.40.2"
   },
   "devDependencies": {
     "jshint": "*",
@@ -41,5 +44,6 @@
     "seed",
     "script-base.js",
     "util.js"
-  ]
+  ],
+  "snyk": true
 }
